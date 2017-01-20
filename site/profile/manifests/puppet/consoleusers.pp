@@ -3,8 +3,8 @@ class profile::puppet::consoleusers {
     ensure       => 'present',
     name         => 'deploy',
     display_name => 'deployment user account',
-    email        => 'james.jones@puppet.com',
+    email        => 'matthew.yates@puppet.com',
     password     => 'puppetlabs',
-    roles        => [ 'Code Deployers', 'Operators', 'Node Data Viewer' ],
+    roles        => [ 'Code Deployers', 'Operators', 'Viewers' ],
   }
 }
