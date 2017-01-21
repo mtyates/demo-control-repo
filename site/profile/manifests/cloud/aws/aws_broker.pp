@@ -1,5 +1,5 @@
 class profile::cloud::aws::aws_broker(
-  String $region = 'us-west',
+  String $region = 'us-east',
   String $aws_access_key_id = '',
   String $aws_secret_access_key = '',
 ){
