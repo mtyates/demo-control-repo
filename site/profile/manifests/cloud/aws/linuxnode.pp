@@ -1,6 +1,6 @@
 define profile::cloud::aws::linuxnode (
   $nodename = $title,
-  $availability_zone = 'us-east-1c',
+  $availability_zone = 'us-east-1a',
   $image_id = 'ami-b63769a1',
   $region = 'us-east-1',
   $instance_type = 'm3.medium',
