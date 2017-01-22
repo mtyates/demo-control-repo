@@ -72,8 +72,8 @@ mod 'ghoneycutt/selinux'
 mod 'openssh',
    :git => 'https://github.com/puppetlabs/tse-module-openssh.git'
 
-mod 'hosts',
-   :git => 'https://github.com/velocity303/puppet-module-hosts.git'
+#mod 'hosts',
+#   :git => 'https://github.com/velocity303/puppet-module-hosts.git'
 
 # Other modules
 ###############################################################################
