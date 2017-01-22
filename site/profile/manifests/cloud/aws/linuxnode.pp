@@ -10,8 +10,8 @@ define profile::cloud::aws::linuxnode (
   $pp_project = 'DemoForCustomer',
   $pp_created_by = 'matthew.yates',
   $key_name = 'matthew-yates-key',
-  $master_ip = '10.90.30.218',
-  $master_host = $::fqdn,
+  $master_ip = '10.90.30.181',
+  $master_host = 'puppet.example.com',
   $agent_role = 'base',
 ) {
 
