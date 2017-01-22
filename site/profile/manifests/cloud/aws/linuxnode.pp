@@ -4,7 +4,7 @@ define profile::cloud::aws::linuxnode (
   $image_id = 'ami-b63769a1',
   $region = 'us-east-1',
   $instance_type = 'm3.medium',
-  $security_groups = ['tse-agents','tse-crossconnect', 'tse-master'],
+  $security_groups = ['tse-us-east-1-agents', 'tse-us-east-1-master', 'tse-us-east-1-crossconnect'],
   $subnet = 'tse-us-east-1-avza',
   $pp_department = 'TSE',
   $pp_project = 'DemoForCustomer',
