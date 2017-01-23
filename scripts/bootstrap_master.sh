@@ -124,15 +124,15 @@ fi
 #   /bin/echo "preserve_hostname: true" >> /etc/cloud/cloud.cfg
 # }
 #
-# if [$is_ec2 == 'true' ]
-#   then
-#     static_hostname_setup
-# fi
 
 setup_networking
 download_pe
 copy_ssh_keys
 install_pe
+# if [$is_ec2 == 'true' ]
+#   then
+#     static_hostname_setup
+# fi
 add_pe_users
 deploy_code_pe
 setup_hiera_pe
