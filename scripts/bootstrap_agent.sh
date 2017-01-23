@@ -12,7 +12,7 @@ function setup_networking {
 }
 
 function install_prereqs {
-  yum -y install curl
+  apt -y install curl
 }
 
 function install_poss_puppetagent {
