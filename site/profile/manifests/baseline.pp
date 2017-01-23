@@ -1,7 +1,7 @@
 class profile::baseline {
   include profile::baseline::motd
-  include profile::baseline::hosts
-  include profile::baseline::ssh
+  contain profile::baseline::hosts
+  contain profile::baseline::ssh
   include profile::baseline::packages
   #include profile::baseline::sudo
   include profile::baseline::ntp
@@ -10,4 +10,5 @@ class profile::baseline {
   #include profile::baseline::users
   include profile::puppet::agent
   include profile::baseline::selinux
+  Class['profile::baseline::hosts'] -> Class['profile::baseline::ssh']  
 }
