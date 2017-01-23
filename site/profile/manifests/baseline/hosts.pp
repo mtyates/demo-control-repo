@@ -11,7 +11,7 @@ class profile::baseline::hosts {
   else {
     class  { '::hosts':
       collect_all           => true,
-      purge_hosts           => true,
+      purge_hosts           => false,
       enable_ipv6_localhost => false,
     }
   }
