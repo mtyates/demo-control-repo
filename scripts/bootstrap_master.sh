@@ -110,6 +110,25 @@ if [ $is_ec2 == 'true' ]
     ec2_setup
 fi
 
+# Need a function here to ensure the gem install of aws bits and hiera-eyaml
+# /opt/puppetlabs/puppet/bin/gem install aws-sdk-core retries
+# /opt/puppetlabs/puppet/bin/gem install hiera-eyaml
+#
+# Optional autosigner.conf configuration
+# /bin/echo "*" >> /etc/puppetlabs/puppet/autosign.conf
+# systemctl restart pe-pupppetserver
+#
+# Need a line to ensure persistent hostname across reboots in AWS
+# 
+# function static_hostname_setup {
+#   /bin/echo "preserve_hostname: true" >> /etc/cloud/cloud.cfg
+# }
+#
+# if [$is_ec2 == 'true' ]
+#   then
+#     static_hostname_setup
+# fi
+
 setup_networking
 download_pe
 copy_ssh_keys
