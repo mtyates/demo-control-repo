@@ -9,6 +9,6 @@ base_packages:
  - mlocate
  - wget
  - curl
-profile::puppet::app_orch_settings::setting: true
+profile::puppet::app_orch_settings::setting: false
 puppet_enterprise::profile::puppetdb::node_purge_ttl: "1s"
 puppet_enterprise::profile::console::display_local_time: true
