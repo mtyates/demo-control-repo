@@ -12,11 +12,11 @@ function ec2_setup {
   mount /dev/xvdb1 /opt
   echo "/dev/xvdb1              /opt                    ext4    defaults        0 2" >> /etc/fstab
   lsblk
+  /bin/echo "preserve_hostname: true" >> /etc/cloud/cloud.cfg
 }
 
 function setup_networking {
-  echo "$server_name" > /etc/hostname
-  hostname $server_name
+  hostnamectl set-hostname $server_name
   echo "127.0.0.1 $server_name puppet localhost.localdomain localhost" > /etc/hosts
 }
 
@@ -105,7 +105,7 @@ function deploy_code_pe {
   /opt/puppetlabs/bin/puppet-code deploy production -w
 }
 
-if [ $is_ec2 == 'true' ]
+if [ $is_ec2 == 'true' ];
   then
     ec2_setup
 fi
@@ -122,19 +122,11 @@ function autosigner {
   systemctl restart pe-pupppetserver
 }
 
-# ensure persistent hostname across reboots in AWS
-function static_hostname_setup {
-  /bin/echo "preserve_hostname: true" >> /etc/cloud/cloud.cfg
-}
 
 setup_networking
 download_pe
 copy_ssh_keys
 install_pe
-if [$is_ec2 == 'true' ]
-  then
-    static_hostname_setup
-fi
 gems
 add_pe_users
 deploy_code_pe
