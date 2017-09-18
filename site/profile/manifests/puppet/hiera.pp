@@ -3,7 +3,6 @@ class profile::puppet::hiera {
   if defined(Service['pe-puppetserver']) {
     class {'::hiera':
       backends        => ['yaml','eyaml'],
-      },
       hierarchy       => [
         'secure',
         'nodes/%{hostname}',
@@ -23,7 +22,6 @@ class profile::puppet::hiera {
   else {
     class {'::hiera':
       backends        => ['yaml','eyaml'],
-      },
       hierarchy       => [
         'secure',
         'nodes/%{hostname}',
