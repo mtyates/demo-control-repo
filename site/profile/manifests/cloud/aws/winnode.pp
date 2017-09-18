@@ -1,7 +1,7 @@
 define profile::cloud::aws::winnode (
   $nodename = $title,
   $availability_zone = 'us-east-1a',
-  $image_id = 'ami-b63769a1',
+  $image_id = 'ami-c6e9d9bd',
   $region = 'us-east-1',
   $instance_type = 'm3.medium',
   $security_groups = ['tse-us-east-1-agents', 'tse-us-east-1-master', 'tse-us-east-1-crossconnect'],
