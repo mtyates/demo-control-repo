@@ -1,4 +1,4 @@
-lass profile::compliance::windows::cis {
+class profile::compliance::windows::cis {
 
   # CIS Microsoft Windows Server 2012 R2 v2.2.0 04-28-2016
   # https://benchmarks.cisecurity.org/tools2/windows/CIS_Microsoft_Windows_Server_2012_R2_Benchmark_v2.2.0.pdf
