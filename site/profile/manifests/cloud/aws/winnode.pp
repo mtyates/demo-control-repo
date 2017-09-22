@@ -29,7 +29,7 @@ define profile::cloud::aws::winnode (
       'project'    => $pp_project,
       'created_by' => $pp_created_by,
     },
-    user_data         => template('data/bootstrap_agent.sh.erb'),
+    user_data         => template('data/bootstrap_agent.ps1.erb'),
   }
 
 
